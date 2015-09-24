@@ -2,10 +2,9 @@
 	margin: 80px;
 	position: relative;
 }
-
 .torso{
+	background-color:crimson;
 	position: absolute;
-	background-color: crimson;
 	width: 200px;
 	height: 125px;
 	border-top-left-radius: 0px;
@@ -25,6 +24,49 @@
 	left: 150px;
 	bottom: 100px;
 	transform-origin: 100% 100%;
-	transform: rotate(30deg);
-	
+	transform: rotate(30deg);	
+}
+.neck{
+	width: 50px;
+	height: 40px;
+	background-color:crimson;
+	position: absolute;
+	bottom: 90px;
+	left: 0 px;
+	transform-origin:0% 100%;
+	transform: rotate(-30deg);
+}
+.head{
+	width:60px;
+	height: 60px;
+	position: absolute;
+	background-color:crimson;
+	border-radius: 30px;
+	bottom: 15px;
+	right: 0px;
+}
+
+.beak{
+	width:0px;
+	height:0px;
+	border-top: 12px solid transparent;
+	border-right: 40px solid crimson;
+	border-left: 0px solid transparent;
+	border-bottom: 12px solid transparent;
+	position: absolute;
+	right: 50px;
+	bottom: 23px;
+}
+.leg{
+	width: 10px;
+	height: 60px;
+	background-color:crimson;
+	position: absolute;
+	top: 110px;
+}
+.first{
+	left:80px;
+}
+.second{
+	left: 120px;
 }
