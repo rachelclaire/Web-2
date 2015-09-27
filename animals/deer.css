@@ -17,19 +17,51 @@
 .legs{
 	width: 20px;
 	height: 140px;
-	top: 30px;
+	top: 40px;
 	border-radius: 20px;
 }
 .one{
 	left: 0px;
-	top: 40px;
 }
 .two{
-	left: 60px;
+	left: 30px;
 }
-.one{
-	left: 0px;
+.three{
+	right: 0px;
 }
-.one{
-	left: 0px;
+.four{
+	right: 30px;
+}
+.neck{
+	width: 40px;
+	height:80px;
+	right: 160px;
+	bottom: 50px;
+	border-radius: 10px;
+}
+.head{
+	width: 70px;
+	height: 30px;
+	border-radius: 10px;
+	right: 0px;
+}
+.antler{
+	width: 15px;
+	height: 60px;
+	bottom: 0px;
+	border-radius: 5px;
+}
+.first{
+	right: 25px;
+}
+.second{
+	right: 0px;
+}
+.tail{
+	width: 40px;
+	height: 20px;
+	left:190px;
+	border-radius: 5px;
+	transform-origin: 0% 100%;
+	transform: rotate(-30deg);
 }
