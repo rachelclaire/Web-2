@@ -32,6 +32,12 @@
 .four{
 	right: 30px;
 }
+.hoof{
+	background-color: saddlebrown;
+	width: 20px;
+	height: 30px;
+	bottom: 0px;
+}
 .neck{
 	width: 40px;
 	height:80px;
@@ -56,6 +62,23 @@
 }
 .second{
 	right: 0px;
+}
+.snout{
+	background-color: saddlebrown;
+	width: 18px;
+	height: 30px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	z-index: 3;
+}
+.eye{
+	background-color: black;
+	width:10px;
+	height: 10px;
+	border-radius: 5px;
+	z-index: 4;
+	right: 25px;
+	top: 10px;
 }
 .tail{
 	width: 40px;
