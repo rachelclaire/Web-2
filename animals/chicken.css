@@ -3,7 +3,7 @@
 	position: relative;
 }
 .part{
-	background-color: crimson;
+	background-color: wheat;
 	position: absolute;
 }
 .torso{
@@ -33,15 +33,11 @@
 	left: 0 px;
 }
 .head{
-	background-color:blue;
 	width:40px;
 	height: 40px;
-	position: absolute;
-	background-color:crimson;
 	border-radius: 30px;
 	top:0;
 	right: 30px;
-	z-index: 10;
 }
 .tuftbig{
 	width: 20px;
@@ -49,11 +45,15 @@
 	border-radius: 10px;
 	bottom: 35px;
 	right: 0px;
+	background-color: crimson;
+	z-index: -1;
 }
 .tuftsmall{
 	width: 16px;
 	height: 16px;
 	border-radius: 8px;
+	background-color: crimson;
+	z-index: -1;
 }
 .one{
 	bottom: 0px;
@@ -68,20 +68,21 @@
 	width:0px;
 	height:0px;
 	border-top: 12px solid transparent;
-	border-right: 40px solid crimson;
+	border-right: 40px solid GoldenRod;
 	border-left: 0px solid transparent;
 	border-bottom: 12px solid transparent;
 	position: absolute;
 	right: 20px;
 	bottom: 10px;
+	z-index: -1;
 }
 .leg{
 	width: 10px;
 	height: 60px;
-	background-color:crimson;
-	position: absolute;
 	top: 110px;
 	border-radius: 3px;
+	background-color: GoldenRod;
+	z-index: -1;
 }
 .first{
 	left:80px;
