@@ -1,0 +1,70 @@
+.nemo{
+	position: relative;
+	width: 1000px;
+	height: 1000px;
+	margin: 200px;
+}
+.part{
+	background-color: orange;
+	position: absolute;
+}
+.torso{
+	width: 300px;
+	height: 200px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 100px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 100px;
+}
+.head{
+	width: 176px;
+	height: 176px;
+	border-radius: 60px;
+	right: 210px;
+	transform-origin: 50% 50%;
+	transform: rotate(45deg);
+	bottom: 12px;
+}
+.stripes{
+	background-color: linen;
+	height: 200px;
+}
+.one{
+	width: 50px;
+}
+.two{
+	width: 70px;
+	right: 120px;
+}
+.three{
+	width: 45px;
+	left: 40px;
+	height: 90px;
+}
+.tail{
+	width: 150px;
+	height: 90px;
+	border-top-right-radius:45px;
+	border-bottom-right-radius: 45px;
+	left: 240px;
+	top: 45px;
+}
+.finone{
+	width: 140px;
+	height: 140px;
+	border-radius: 70px;
+	bottom: 75px;
+	left: 170px;
+	z-index: -1;
+}
+.fintwo{
+	width: 140px;
+	height: 140px;
+	border-radius: 70px;
+	top: 75px;
+	left: 170px;
+	z-index: -1;
+}
+
+
+
