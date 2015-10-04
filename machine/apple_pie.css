@@ -1,0 +1,194 @@
+
+.pie{
+	width: 1000px;
+	height: 450px;
+	margin: 60px;
+	position: relative;
+}
+
+.knife{
+	position: absolute;	
+}
+.handle{
+	height: 30px;
+	width: 180px;
+	background-color: #1D1D1D;
+	position: absolute;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.blade{
+	background-color: #C9C8C8;
+	width: 200px;
+	height: 42px;
+	border-bottom-right-radius: 30px;
+	left: 180px;
+}
+.apple{
+	position: absolute;
+}
+.whole{
+	background-color: #C11F38;
+	width: 170px;
+	height: 130px;
+	border-radius: 65px;
+	top: 70px;
+	left: 180px;
+	z-index:-2;
+}
+.slice1{
+	position: absolute;
+	background-color: #C11F38;
+	width: 85px;
+	height: 130px;
+	border-top-left-radius: 65px;
+	border-bottom-left-radius: 65px;
+	left:0px;
+	z-index:2;
+	transform-origin: 50%, 0%;
+}
+.slice2{
+	position: absolute;
+	border-top-right-radius: 65px;
+	border-bottom-right-radius: 65px;
+	background-color: #C11F38;
+	width: 85px;
+	height: 130px;
+	right: 0px;
+	z-index:2;
+	transform-origin: 50%, 0%;
+}
+
+.flesh{
+	position: absolute;
+	background-color: #F1E5C8;
+	width: 70px;
+	height: 120px;
+	z-index:2;
+}
+.left{
+	border-top-left-radius: 65px;
+	border-bottom-left-radius: 65px;
+	right: 0px;
+	top: 5px;
+}
+.right{
+	border-top-right-radius: 65px;
+	border-bottom-right-radius: 65px;
+	left: 0px;
+	top: 5px;
+}
+.appleshadowone{
+	width: 0px;
+	height: 0px;
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+	border-right: 30px solid #E0CEA9;
+	border-left: 0px solid transparent;
+	right: 0px;
+	position: absolute;
+}
+.appleshadowtwo{
+	width: 0px;
+	height: 0px;
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+	border-left: 30px solid #E0CEA9;
+	border-right: 0px solid transparent;
+	left: 0px;
+	position: absolute;
+}
+.shadow{
+	background-color: #9B1B2E;
+	width: 50px;
+	height: 30px;
+	border-radius: 15px;
+	left: 60px;
+	top: 5px;
+}
+.stem{
+	background-color: #35312A;
+	width: 8px;
+	height: 35px;
+	border-radius: 4px;
+	left: 21px;
+	bottom: 14px;
+}
+
+.rollingpin{
+	position: absolute;
+	background-color: #967A68;
+	width: 360px;
+	height: 76px;
+	border-radius: 20px;
+	top: 260px;
+	left: 40px;
+}
+.handle1{
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #AE978A;
+	z-index: -1;
+	left: -60px;
+	top: 22px;
+}
+.handle2{
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #AE978A;
+	z-index: -1;
+	right: -60px;
+	top: 22px;
+}
+.crust{
+	position: absolute;
+}
+.bottomlight{
+	background-color: #EEE1C4;
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	left: 400px;
+}
+
+.bottomdark{
+	background-color: #DDCDAB;
+	width: 220px;
+	height: 220px;
+	border-radius: 110px;
+	left: 40px;
+	top: 40px;
+	z-index: 1;
+}
+
+.rim{
+	position: absolute;
+	background-color: #C9C8C8;
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	left: 720px;
+}
+.wall{
+	position: absolute;
+	background-color: #E2E2E1;
+	width: 278px;
+	height: 278px;
+	border-radius: 139px;
+	left: 11px;
+	top: 11px;
+}
+.bottom{
+	position: absolute;
+	background-color: #C9C8C8;
+	width: 220px;
+	height: 220px;
+	border-radius: 115px;
+	left: 28px;
+	top: 28px;
+}
+
