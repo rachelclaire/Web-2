@@ -16,7 +16,9 @@
 	position: absolute;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+	transform-origin: -20%, -20%;
 }
+.chop{/*put a rotate transition here. use j query to add it on click.*/}
 .blade{
 	background-color: #C9C8C8;
 	width: 200px;
