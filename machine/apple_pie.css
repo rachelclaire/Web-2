@@ -2,7 +2,7 @@
 .pie{
 	width: 1000px;
 	height: 450px;
-	margin: 60px;
+	margin: 100px;
 	position: relative;
 }
 
@@ -18,7 +18,10 @@
 	border-bottom-left-radius: 10px;
 	transform-origin: -20%, -20%;
 }
-.chop{/*put a rotate transition here. use j query to add it on click.*/}
+.chop{
+	transform: rotate(-45deg);
+	transition: rotate(0deg) 3s;
+/*put a rotate transition here. use j query to add it on click.*/}
 .blade{
 	background-color: #C9C8C8;
 	width: 200px;
