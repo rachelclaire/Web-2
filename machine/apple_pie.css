@@ -24,17 +24,28 @@
   	transform: rotate(-45deg);
 }
 .handle.clicked{
-	 -webkit-animation:handle-move 1s linear 1;
+	 -webkit-animation:handle-move 2s linear 1;
+	  -webkit-animation:slices-move 2s linear 1;
  }
-
-	@-webkit-keyframes handle-move {
+.slice1.clicked{
+	transition: opacity:1;
+	opacity: 1;
+}
+.slice2.clicked{
+	transition: opacity:1;
+	opacity: 1;
+}
+	@-webkit-keyframes slices-move {
 	  0% { transform: rotate(-45deg)}
 	  40% { transform: rotate(40deg)}
 	  50% { transform: rotate(40deg)}
-	  100% { transform: rotate(-45deg) }
+	  100% { transform: rotate(-45deg) }	
+} 
 	
-/*put a rotate transition here. use j query to add it on click.*/}
-
+	@-webkit-keyframes handle-move {
+	  0% { transform: rotate(0deg)}
+	  100% { transform: rotate(-90deg) }	
+}
 .blade{
 	background-color: #C9C8C8;
 	width: 200px;
@@ -64,6 +75,8 @@
 	left:0px;
 	z-index:2;
 	transform-origin: 50%, 0%;
+	opacity: 0;
+	transition: opacity 1s;
 }
 .slice2{
 	position: absolute;
@@ -75,6 +88,8 @@
 	right: 0px;
 	z-index:2;
 	transform-origin: 50%, 0%;
+	opacity: 0;
+	transition: opacity 1s;
 }
 
 .flesh{
