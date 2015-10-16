@@ -3,10 +3,11 @@
 <head>
 	<title>Apple Pie</title>
 	<link rel="stylesheet" type="text/css" href="apple_pie.css">
+	<script src='https://code.jquery.com/jquery-1.11.2.js'></script>
 </head>
 <body>
 <div class="pie">
-<div class="knife handle chop">
+<div class="knife handle">
 	<div class="knife blade">
 	</div>
 </div>
@@ -52,6 +53,13 @@
 	</div>
 </div>
 </div>
+
+<script>
+  $(".handle").on("click",function(){ 
+  $(".handle").addClass("clicked")
+});
+</script>
+
 
 </body>
 </html>
