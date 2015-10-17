@@ -25,19 +25,12 @@
 </div>
 
 <div class="rollingpin">
-	<div class="handle1">
-	</div>
-	<div class="handle2">
-	</div>
+	<div class="handle1"></div>
+	<div class="handle2"></div>
 </div>
 
-<div class="crust bottomlight">
-	<div class="crust bottomdark">
-	</div>
-</div>
-
-<div class="crust top dark">
-	<div class="crust top light">
+<div class="crust light">
+	<div class="crust dark">
 	</div>
 </div>
 
@@ -58,11 +51,11 @@
   $(".handle").addClass("clicked")
   $(".slice1").addClass("clicked")
   $(".slice2").addClass("clicked")
-  $(".whole").addClass("clicked")
-	  
+  $(".whole").addClass("clicked")  
 });
-
-
+  $(".rollingpin").on("click",function(){ 
+  $(".light").addClass("clicked") 
+});
 </script>
 
 
