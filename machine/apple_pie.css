@@ -25,27 +25,15 @@
 }
 .handle.clicked{
 	 -webkit-animation:handle-move 2s linear 1;
-	  -webkit-animation:slices-move 2s linear 1;
+	 
  }
-.slice1.clicked{
-	transition: opacity:1;
-	opacity: 1;
-}
-.slice2.clicked{
-	transition: opacity:1;
-	opacity: 1;
-}
-	@-webkit-keyframes slices-move {
+ 
+	@-webkit-keyframes handle-move {
 	  0% { transform: rotate(-45deg)}
 	  40% { transform: rotate(40deg)}
 	  50% { transform: rotate(40deg)}
 	  100% { transform: rotate(-45deg) }	
 } 
-	
-	@-webkit-keyframes handle-move {
-	  0% { transform: rotate(0deg)}
-	  100% { transform: rotate(-90deg) }	
-}
 .blade{
 	background-color: #C9C8C8;
 	width: 200px;
@@ -53,17 +41,32 @@
 	border-bottom-right-radius: 30px;
 	left: 180px;
 }
+
+
 .apple{
-	position: absolute;
-}
-.whole{
-	background-color: #C11F38;
+	position: relative;
+	background-color: transparent;
 	width: 170px;
 	height: 130px;
 	border-radius: 65px;
 	top: 70px;
 	left: 180px;
 	z-index:-2;
+}
+.whole{
+	position: absolute;
+	background-color: #C11F38;
+	width: 170px;
+	height: 130px;
+	border-radius: 65px;
+	z-index:-2;
+	opacity: 1;
+	transition: opacity .2s;
+	transition-delay: .5s;
+}
+.whole.clicked{
+	transition: opacity: 0;
+	opacity: 0;
 }
 .slice1{
 	position: absolute;
@@ -74,9 +77,10 @@
 	border-bottom-left-radius: 65px;
 	left:0px;
 	z-index:2;
-	transform-origin: 50%, 0%;
+	transform-origin: 70% 80%;
 	opacity: 0;
-	transition: opacity 1s;
+	transition: opacity .2s;
+	transition-delay: .5s;
 }
 .slice2{
 	position: absolute;
@@ -87,11 +91,35 @@
 	height: 130px;
 	right: 0px;
 	z-index:2;
-	transform-origin: 50%, 0%;
+	transform-origin: 30% 80%;
 	opacity: 0;
-	transition: opacity 1s;
+	transition: opacity .2s;
+	transition-delay: .5s;
 }
-
+.slice1.clicked{
+	transition: opacity:1;
+	opacity: 1;
+	-webkit-animation:slice1-move 1s linear 1;
+	transform: rotate(-90deg);
+}
+.slice2.clicked{
+	transition: opacity:1;
+	opacity: 1;
+	-webkit-animation:slice2-move 1s linear 1;
+	transform: rotate(90deg);
+}
+	@-webkit-keyframes slice1-move {
+	  0% { transform: rotate(0deg)}
+	  45% { transform: rotate(0deg)}
+	  95% { transform: rotate(-95deg)}
+	  100% { transform: rotate(-90deg)}	
+} 
+	@-webkit-keyframes slice2-move {
+  	  0% { transform: rotate(0deg)}
+  	  45% { transform: rotate(0deg)}
+  	  95% { transform: rotate(95deg)}
+  	  100% { transform: rotate(90deg)}		
+}	
 .flesh{
 	position: absolute;
 	background-color: #F1E5C8;
@@ -138,6 +166,7 @@
 	border-radius: 15px;
 	left: 60px;
 	top: 5px;
+	position: absolute;
 }
 .stem{
 	background-color: #35312A;
@@ -146,8 +175,8 @@
 	border-radius: 4px;
 	left: 21px;
 	bottom: 14px;
+	position: absolute;
 }
-
 .rollingpin{
 	position: absolute;
 	background-color: #967A68;
