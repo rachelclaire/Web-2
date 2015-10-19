@@ -25,6 +25,7 @@
 </div>
 
 <div class="rollingpin">
+	<div class="cylinder"></div>
 	<div class="handle1"></div>
 	<div class="handle2"></div>
 </div>
@@ -53,8 +54,13 @@
   $(".slice2").addClass("clicked")
   $(".whole").addClass("clicked")  
 });
-  $(".rollingpin").on("click",function(){ 
+
+
+
+
+  $(".rollingpin").on("click",function(e){ 
   $(".light").addClass("clicked") 
+  $(".rollingpin").addClass("clicked") 
 });
 </script>
 

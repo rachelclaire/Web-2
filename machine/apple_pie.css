@@ -5,8 +5,7 @@
 	margin: 100px;
 	margin-top: 250px;
 	position: relative;
-	background-color: beige;
-	z-index: -3;
+	background-color: transparent;
 }
 .knife{
 	position: absolute;	
@@ -177,22 +176,42 @@
 }
 .rollingpin{
 	position: absolute;
+	background-color: transparent;
+	width: 360px;
+	height: 76px;
+	border-radius: 20px;
+	top: 200px;
+	left: 480px;
+}
+.cylinder{
+	position: absolute;
 	background-color: #967A68;
 	width: 360px;
 	height: 76px;
 	border-radius: 20px;
-	top: 150px;
-	left: 480px;
+	transform-origin: 50% 50%;
+	z-index: 2;
 }
+.rollingpin.clicked{
+	top: -150px;
+	-webkit-animation:pin 1s linear 1;
+}
+
+@-webkit-keyframes pin {
+  0% { top: 150px; }
+  100% { top: -150px; }	
+}
+
 .handle1{
 	position: absolute;
 	width: 100px;
 	height: 30px;
 	border-radius: 15px;
 	background-color: #AE978A;
-	z-index: -1;
 	left: -60px;
 	top: 22px;
+	z-index:-1;
+	
 }
 .handle2{
 	position: absolute;
@@ -200,9 +219,10 @@
 	height: 30px;
 	border-radius: 15px;
 	background-color: #AE978A;
-	z-index: -1;
 	right: -60px;
 	top: 22px;
+	z-index:-1;
+	
 }
 .crust{
 	position: absolute;
@@ -213,14 +233,22 @@
 	height: 300px;
 	border-radius: 150px;
 	left: 500px;
-	top: -150px;
+	top: -50px;
 	transform: scale(.5);
-	transition: transform 2s ease-in-out;
+	transition: transform 2s ease;
+
 }
-.light.clicked{
-	transform: scale(2);
-	background-color: blue;
+.crust.light.clicked{
+	-webkit-animation:dough 1s linear 1;
+	transform: scale(1);
 }
+	
+@-webkit-keyframes dough {
+  0% { transform:scale(.5) }
+  100% { transform:scale(1) }	
+}
+
+
 .crust.dark{
 	background-color: #DDCDAB;
 	width: 220px;
