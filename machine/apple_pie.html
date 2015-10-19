@@ -16,12 +16,18 @@
 	<div class="whole">
 		<div class="shadow"><div class="stem"></div></div>
 	</div>
-	<div class="slice1">
-		<div class="flesh left"><div class="appleshadowone"></div></div>
+	<div class="slice left first">
+		<div class="flesh fleshleft"><div class="appleshadowone"></div></div>
 	</div>
-	<div class="slice2">
-		<div class="flesh right"><div class="appleshadowtwo"></div></div>
+	<div class="slice right second">
+		<div class="flesh fleshright"><div class="appleshadowtwo"></div></div>
+	</div>
+	<div class="slice left third">
+		<div class="flesh fleshleft"><div class="appleshadowone"></div></div>
 	</div>	
+	<div class="slice right fourth">
+		<div class="flesh fleshright"><div class="appleshadowtwo"></div></div>
+	</div>
 </div>
 
 <div class="rollingpin">
@@ -50,11 +56,10 @@
 <script>
   $(".handle").on("click",function(){ 
   $(".handle").addClass("clicked")
-  $(".slice1").addClass("clicked")
-  $(".slice2").addClass("clicked")
+  $(".slice.first").addClass("fall")
+  $(".slice.second").addClass("fall")
   $(".whole").addClass("clicked")  
 });
-
 
   $(".rollingpin").on("click",function(e){ 
   $(".light").addClass("clicked") 
@@ -64,6 +69,24 @@
   $(".light").on("click",function(e){ 
   $(".dark").addClass("clicked") 
   $(".light").addClass("move") 
+});
+
+  $(".slice.left.first").on("click",function(e){ 
+  $(".slice.left.third").addClass("show") 
+  $(".slice.first").addClass("move") 
+});
+
+  $(".slice.right.second").on("click",function(e){ 
+  $(".slice.right.fourth").addClass("show") 
+  $(".slice.second").addClass("move") 
+});
+
+  $(".slice.left.third").on("click",function(e){ 
+  $(".slice.left.third").addClass("move")  
+});
+
+  $(".slice.right.fourth").on("click",function(e){ 
+  $(".slice.right.fourth").addClass("move")  
 });
 </script>
 

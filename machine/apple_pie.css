@@ -48,7 +48,7 @@
 	border-radius: 65px;
 	top: 70px;
 	left: 180px;
-	z-index:-2;
+	
 }
 .whole{
 	position: absolute;
@@ -65,72 +65,147 @@
 	transition: opacity: 0;
 	opacity: 0;
 }
-.slice1{
+.slice{
 	position: absolute;
 	background-color: #C11F38;
 	width: 85px;
 	height: 130px;
-	border-top-left-radius: 65px;
-	border-bottom-left-radius: 65px;
-	left:0px;
-	z-index:2;
-	transform-origin: 70% 80%;
-	opacity: 0;
-	transition: opacity .2s;
-	transition-delay: .5s;
+	z-index:5;
 }
-.slice2{
-	position: absolute;
+.slice.right{
 	border-top-right-radius: 65px;
 	border-bottom-right-radius: 65px;
-	background-color: #C11F38;
-	width: 85px;
-	height: 130px;
-	right: 0px;
-	z-index:2;
 	transform-origin: 30% 80%;
+}
+.slice.left{
+	border-top-left-radius: 65px;
+	border-bottom-left-radius: 65px;
+	transform-origin: 70% 80%;
+}
+.slice.first{
+	left:0px;
+	top:0px;
 	opacity: 0;
 	transition: opacity .2s;
 	transition-delay: .5s;
+	
 }
-.slice1.clicked{
+.slice.second{
+	right: 0px;
+	opacity: 0;
+	transition: opacity .2s;
+	transition-delay: .5s;
+	z-index: 10;
+}
+.slice.first.fall{
 	transition: opacity:1;
 	opacity: 1;
-	-webkit-animation:slice1-move 1s linear 1;
+	-webkit-animation:slice1-fall 1s linear 1;
 	transform: rotate(-90deg);
 }
-.slice2.clicked{
-	transition: opacity:1;
-	opacity: 1;
-	-webkit-animation:slice2-move 1s linear 1;
-	transform: rotate(90deg);
-}
-	@-webkit-keyframes slice1-move {
+
+	@-webkit-keyframes slice1-fall {
 	  0% { transform: rotate(0deg)}
 	  45% { transform: rotate(0deg)}
 	  95% { transform: rotate(-95deg)}
 	  100% { transform: rotate(-90deg)}	
 } 
-	@-webkit-keyframes slice2-move {
+
+.slice.first.move{
+	-webkit-animation:slice1move .5s ease 1;
+	left:350px;
+	top: 350px;
+	transform:rotate(-40deg)
+}
+
+	@-webkit-keyframes slice1move {
+	  0% { left: 0px;top:0px; transform:rotate(-90deg) }
+	  100% { left: 350px;top: 350px; transform:rotate(-40deg)}	
+} 
+
+.slice.second.fall{
+	transition: opacity:1;
+	opacity: 1;
+	-webkit-animation:slice2-fall 1s linear 1;
+	transform: rotate(90deg);
+}
+
+	@-webkit-keyframes slice2-fall {
   	  0% { transform: rotate(0deg)}
   	  45% { transform: rotate(0deg)}
   	  95% { transform: rotate(95deg)}
   	  100% { transform: rotate(90deg)}		
+}
+
+.slice.second.move{
+	transition: opacity:1;
+	opacity: 1;
+	-webkit-animation:slice2move .5s linear 1;
+	transform: rotate(35deg);
+	left: 350px;
+	top: 300px;
+}
+
+	@-webkit-keyframes slice2move {
+	  0% { left:100px;top:0px; transform:rotate(90deg) }
+	  100% { left:350px;top: 300px; transform:rotate(35deg)}	
+}
+
+
+.slice.left.third{
+	display: none;
+	transition: opacity 0s;
+	transform: rotate(-90deg);
+}
+.slice.left.third.show{
+	display: block;
+}
+.slice.third.move{
+	-webkit-animation:slice3move .5s ease 1;
+	left: 300px;
+	top: 350px;
+	transform:rotate(-80deg);
+}
+
+	@-webkit-keyframes slice3move {
+	  0% { left: 0px;top:0px; transform:rotate(-90deg) }
+	  100% { left: 300px;top: 350px; transform:rotate(-80deg)}	
+} 
+
+.slice.right.fourth{
+	right:0px;
+	display: none;
+	transform: rotate(90deg);
+}
+.slice.fourth.show{
+	display: block;	
+}
+.slice.fourth.move{
+	-webkit-animation:slice4move .5s linear 1;
+	left:300px;
+	top: 220px; 
+	transform:rotate(125deg);
 }	
+
+	@-webkit-keyframes slice4move {
+	  0% { left:100px;top:0px; transform:rotate(90deg) }
+	  100% { left:300px;top: 220px; transform:rotate(125deg)}	
+}
+
 .flesh{
 	position: absolute;
-	background-color: #F1E5C8;
+	background-color: #f6eedc;
 	width: 70px;
 	height: 120px;
-	z-index:2;
+	z-index:3;
 }
-.left{
+.fleshleft{
 	border-top-left-radius: 65px;
 	border-bottom-left-radius: 65px;
 	right: 0px;
 	top: 5px;
 }
-.right{
+.fleshright{
 	border-top-right-radius: 65px;
 	border-bottom-right-radius: 65px;
 	left: 0px;
@@ -141,7 +216,7 @@
 	height: 0px;
 	border-top: 60px solid transparent;
 	border-bottom: 60px solid transparent;
-	border-right: 30px solid #E0CEA9;
+	border-right: 30px solid #e8dabc;
 	border-left: 0px solid transparent;
 	right: 0px;
 	position: absolute;
@@ -151,7 +226,7 @@
 	height: 0px;
 	border-top: 60px solid transparent;
 	border-bottom: 60px solid transparent;
-	border-left: 30px solid #E0CEA9;
+	border-left: 30px solid #e8dabc;
 	border-right: 0px solid transparent;
 	left: 0px;
 	position: absolute;
@@ -277,6 +352,7 @@
 	border-radius: 150px;
 	left: 380px;
 	bottom: 120px;
+	z-index:0;
 }
 .wall{
 	position: absolute;
