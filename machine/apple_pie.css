@@ -235,8 +235,7 @@
 	left: 500px;
 	top: -50px;
 	transform: scale(.5);
-	transition: transform 2s ease;
-
+	transition: 1s;
 }
 .crust.light.clicked{
 	-webkit-animation:dough 1s linear 1;
@@ -248,8 +247,12 @@
   100% { transform:scale(1) }	
 }
 
-
-.crust.dark{
+.light.move{
+	top: 330px;
+	left: 380px;
+	z-index: 3;
+}
+.dark{
 	background-color: #DDCDAB;
 	width: 220px;
 	height: 220px;
@@ -258,9 +261,13 @@
 	top: 40px;
 	z-index: 1;
 	opacity: 0;
+	transition: opacity 1s;
+	transition-delay: .5s;
 }
-.crust.dark.clicked{
-	opcaity: 1;
+.dark.clicked{
+	transition: opacity:1;
+	opacity: 1;
+	z-index: 4;
 }
 .rim{
 	position: absolute;
@@ -269,7 +276,7 @@
 	height: 300px;
 	border-radius: 150px;
 	left: 380px;
-	bottom: 40px;
+	bottom: 120px;
 }
 .wall{
 	position: absolute;

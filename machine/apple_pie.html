@@ -56,11 +56,14 @@
 });
 
 
-
-
   $(".rollingpin").on("click",function(e){ 
   $(".light").addClass("clicked") 
   $(".rollingpin").addClass("clicked") 
+});
+
+  $(".light").on("click",function(e){ 
+  $(".dark").addClass("clicked") 
+  $(".light").addClass("move") 
 });
 </script>
 
