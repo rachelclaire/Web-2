@@ -1,0 +1,55 @@
+<html><body>
+<script src='http://cykod.github.io/Logoish/logoish.js'></script>
+<script>
+Logoish.init();
+
+speed(0);
+lineColor("#edb0b6");
+function hslColor(hue,saturation,lightness,alpha) {
+  lineColor("hsla(" + hue + "," + saturation + "%," + lightness + "%," + alpha + ")") 
+}
+lineWidth(1)
+
+function segment(size) {
+  rotate(5);
+  forward(size);
+  rotate(-60);
+  forward(size/5);
+  rotate(-60);
+  forward(size);
+}
+function blue(size){
+for(var x = 0;x < 300; x++){ 
+  segment(x/2); 
+  //lineColor("#255584"); 
+}
+
+}
+
+
+function segment2(size) {
+  rotate(8);
+  forward(size);
+  rotate(-10);
+  forward(size/5);
+  rotate(-120);
+  forward(size);
+}
+
+function green(size){
+for(var x = 0;x < 3; x++){ 
+  segment2(x+2);  
+ 
+}
+}
+
+for(var x = 0;x < 12; x++){ 
+  //lineColor("#255584");
+  blue(x);  
+  //lineColor("#61af6c");
+  green(x);
+  hslColor(x*2,100,20,60);
+}
+
+</script>
+</body></html>
