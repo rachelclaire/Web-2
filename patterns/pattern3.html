@@ -1,0 +1,27 @@
+<html><body>
+<script src='http://cykod.github.io/Logoish/logoish.js'></script>
+<script>
+Logoish.init();
+
+speed(0);
+lineColor("#1a2751");
+lineWidth(1)
+
+function triangle(size) {
+  forward(size);
+  rotate(120);
+  forward(size);
+  rotate(120);
+  forward(size);
+  rotate(120);
+}
+
+for(var y = 0; y < 40; y++) {
+  for(var x = 0; x < 40; x++) {
+    moveTo(x*25,y * 15);
+    triangle(x*5);
+	triangle(x*3+2);
+  }
+}
+</script>
+</body></html>
