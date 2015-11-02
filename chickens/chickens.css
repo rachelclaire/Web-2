@@ -107,7 +107,7 @@ p{
 	position: absolute;
 	width:300px;
 	right: 300px;
-	/*transition: transform 3s;*/
+	transition: transform 3s;
 }
 .walker.arriving{
 	left:300px;
