@@ -14,3 +14,8 @@ $(".titlewrapper").on("rearriving",function() {
   $(this).addClass("rearriving");
   $(this).removeClass("departing");
 });
+
+$(".scroller").scrollFlight();
+$(".page three").on("departing",function() {
+  $(".walker").addClass("arriving");
+});

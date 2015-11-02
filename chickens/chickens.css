@@ -37,7 +37,7 @@ body { font-family: Georgia; color: white; font-size:16px; }
 .rearriving{
 	opacity: 1;
 }
-.arrived{
+.titlewrapper.arrived{
 	opacity: 1;
 }
 .titleone{
@@ -102,4 +102,13 @@ p{
 	text-align: center;
 	color: #f9f6ea;
 	width: 100%;
+}
+.walker{
+	position: absolute;
+	width:300px;
+	right: 300px;
+	/*transition: transform 3s;*/
+}
+.walker.arriving{
+	left:300px;
 }
