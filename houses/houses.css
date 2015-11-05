@@ -1,17 +1,71 @@
-body{
-	margin: 40px;
+* {
+  margin: 0;
+  padding: 0;
 }
-a{
-	text-decoration:none;
-	color: black;
-	font-family: Georgia;
-	margin: 20px;
+
+body { font-family: Times; font-size:16px; }
+
+
+.panel{
+	width: 300px;
+	background-color: white;
+	position: fixed;
+	left: 0px;
+	z-index: 1;
+	min-height: 100vh;
 }
-a:hover {
-    color: gray;
+.title{
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	text-align: center;
+
 }
-img{
-	margin: 100px;
+h1{
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+h2{
+	font-family: 'Trocchi', serif;
+	font-size: .8em;
+}
+h3{
+	font-family: 'Trocchi', serif;
+	font-size: 2em;
+	letter-spacing: 2px;
+}
+h4{
+	font-family: 'Oswald', sans-serif;
+	font-size: 4em;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	line-height: 85%;
+}
+.page {
+  min-height: 100vh;
+  position:relative;
+}
+.pageone{
+	background-color: #e2d0b5;
+}
+.pagetwo{
+	background-color: #799fcd;
+}
+.pagethree{
+	background-color: #ead6dd;
+}
+
+.pagefour{
+	background-color: #ddcf93;
+}
+img.house{
+	position: absolute;
+	right: 100px;
+	top: 100px;
 	width: 600px;
-	display: block;
+}
+.victorian{
+	top: 50px;
 }
