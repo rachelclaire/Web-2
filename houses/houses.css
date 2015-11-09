@@ -86,7 +86,7 @@ h4{
 	width:100%;
 	padding: 0;
 	margin: 0;
-	background-size: 500px;
+	background-size: cover;
 	background-position: center;
 	display: block;
 }
@@ -186,18 +186,36 @@ h4{
 	background-image: url("images/photos/bungalow/bungalow_4.jpg");
 }
 
-img.house{
+.imagewrapper{
 	position: relative;
 	padding-left: 20%;
 	margin: 0 auto;
 	display: block;
 	width: 600px;
+	height: 325px;
 	top: 50%;
 	transform: translateY(40%);
+	background-color: crimson;
 }
-.house.hoverimage{
-	z-index: 3;
+img.house{
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	width: 600px;
+
+}
+.colonialroof{
+	width: 380px;
+	position: absolute;
+	height: 60px;
+	background-color: white;
+	top: 0px;
 	opacity: 0;
+	right:40px;
+	-webkit-transform: skew(55deg);
+		   -moz-transform: skew(55deg);
+		     -o-transform: skew(55deg);
+}
 }
 .house.victorian{
 	width: 500px;
