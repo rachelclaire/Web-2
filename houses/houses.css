@@ -15,9 +15,9 @@ body { font-family: Times; font-size:16px; }
 	min-height: 100vh;
 }
 .title{
-	position: absolute;
-	top: 10px;
-	left: 20px;
+	position: relative;
+	top: 15px;
+	margin: auto;
 	text-align: center;
 }
 h1{
@@ -56,8 +56,13 @@ h4{
 .description{
 	font-family: 'Trocchi', serif;
 	font-size: .8em;
-	line-height: 125%;	
+	line-height: 135%;	
 }
+
+.characteristicimage{
+	width: 60%;
+}
+
 .page {
   min-height: 100vh;
   position:relative;
@@ -71,22 +76,116 @@ h4{
 .pagethree{
 	background-color: #ead6dd;
 }
-
 .pagefour{
 	background-color: #ddcf93;
 }
+
 .box{
 	background-color: cornflowerblue;
 	min-height: 50vh;
 	width:100%;
 	padding: 0;
 	margin: 0;
-	background-image: url("images/photos/colonial/colonial_1.jpg");
+	background-size: 500px;
+	background-position: center;
 	display: block;
 }
-.box.colonialone{
-	background:url("images/photos/colonial/colonial_1.jpg");
+.overlay.colonial:hover{
+	opacity: .8;
 }
+.overlay.federal:hover{
+	opacity: .8;
+}
+.overlay.victorian:hover{
+	opacity: .8;
+}
+.overlay.bungalow:hover{
+	opacity: .8;
+}
+.overlay.colonial{
+	width: 100%;
+	min-height: 50vh;
+	background-color:#773131;
+	opacity:0;
+}
+.overlay.federal{
+	width: 100%;
+	min-height: 50vh;
+	background-color:#b54112;
+	opacity:0;
+}
+.overlay.victorian{
+	width: 100%;
+	min-height: 50vh;
+	background-color:#c6ab6a;
+	opacity:0;
+}
+.overlay.bungalow{
+	width: 100%;
+	min-height: 50vh;
+	background-color:#849d81;
+	opacity:0;
+}
+.label{
+	margin: 0 auto;
+	font-family: 'Trocchi', serif;
+	color:white;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	left: 35%;
+	top: 50%;
+	background-color: black;
+}
+.box.colonial1{
+	background-image: url("images/photos/colonial/colonial_1.jpg");
+}
+.box.colonial2{
+	background-image: url("images/photos/colonial/colonial_2.jpg");
+}
+.box.colonial3{
+	background-image: url("images/photos/colonial/colonial_3.jpg");
+}
+.box.colonial4{
+	background-image: url("images/photos/colonial/colonial_4.jpg");
+}
+.box.federal1{
+	background-image: url("images/photos/federal/federal_1.jpg");
+}
+.box.federal2{
+	background-image: url("images/photos/federal/federal_2.jpg");
+}
+.box.federal3{
+	background-image: url("images/photos/federal/federal_3.jpg");
+}
+.box.federal4{
+	background-image: url("images/photos/federal/federal_4.jpg");
+}
+.box.victorian1{
+	background-image: url("images/photos/victorian/victorian_1.jpg");
+}
+.box.victorian2{
+	background-image: url("images/photos/victorian/victorian_2.jpg");
+}
+.box.victorian3{
+	background-image: url("images/photos/victorian/victorian_3.jpg");
+}
+.box.victorian4{
+	background-image: url("images/photos/victorian/victorian_4.jpg");
+}
+.box.bungalow1{
+	background-image: url("images/photos/bungalow/bungalow_1.jpg");
+}
+.box.bungalow2{
+	background-image: url("images/photos/bungalow/bungalow_2.jpg");
+}
+.box.bungalow3{
+	background-image: url("images/photos/bungalow/bungalow_3.jpg");
+}
+.box.bungalow4{
+	background-image: url("images/photos/bungalow/bungalow_4.jpg");
+}
+
 img.house{
 	position: relative;
 	padding-left: 20%;
