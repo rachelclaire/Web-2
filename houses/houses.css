@@ -77,11 +77,12 @@ h4{
 }
 .box{
 	background-color: cornflowerblue;
-	 min-height: 50vh;
+	min-height: 50vh;
 	width:100%;
 	padding: 0;
 	margin: 0;
 	background-image: url("images/photos/colonial/colonial_1.jpg");
+	display: block;
 }
 .box.colonialone{
 	background:url("images/photos/colonial/colonial_1.jpg");
