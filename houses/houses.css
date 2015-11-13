@@ -5,7 +5,9 @@
 
 body { font-family: Times; font-size:16px; }
 
-
+.purple{
+	background-color:red;
+}
 .panel{
 	width: 20%;
 	background-color: white;
@@ -48,6 +50,7 @@ h4{
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+
 .characteristic{
 	font-family: 'Trocchi', serif;
 	font-size: .8em;
@@ -69,6 +72,38 @@ h4{
 }
 .pageone{
 	background-color: #e2d0b5;
+}
+
+.colonialroof{
+	width: 380px;
+	position: absolute;
+	height: 60px;
+	background-color: white;
+	top: 0px;
+	opacity: 0;
+	right:40px;
+	-webkit-transform: skew(55deg);
+		   -moz-transform: skew(55deg);
+		     -o-transform: skew(55deg);
+}
+.colonialface{
+	width: 380px;
+	position: absolute;
+	height: 260px;
+	background-color: white;
+	bottom: 0px;
+	opacity: 0;
+	right:10px;
+}
+
+.pendent{
+	width: 30px;
+	position: absolute;
+	height: 30px;
+	background-color: white;
+	bottom: 0px;
+	opacity: 100;
+	right:10px;
 }
 .pagetwo{
 	background-color: #799fcd;
@@ -204,19 +239,8 @@ img.house{
 	width: 600px;
 
 }
-.colonialroof{
-	width: 380px;
-	position: absolute;
-	height: 60px;
-	background-color: white;
-	top: 0px;
-	opacity: 0;
-	right:40px;
-	-webkit-transform: skew(55deg);
-		   -moz-transform: skew(55deg);
-		     -o-transform: skew(55deg);
-}
-}
+
+
 .house.victorian{
 	width: 500px;
 	transform: translateY(22%);
