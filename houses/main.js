@@ -62,5 +62,29 @@ $(".pendent").hover(function(e){
   $(".characteristic").empty();
 })
 
+$(".elliptocal").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/elliptocal.png");
+  $(".characteristic").text("Eliptocal Fanlight");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
 
+$(".pediment").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/pediment.png");
+  $(".characteristic").text("Pediment");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
 
+$(".pilaster").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/pilaster.png");
+  $(".characteristic").text("Pilasters");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
