@@ -88,3 +88,57 @@ $(".pilaster").hover(function(e){
    $(".characteristicimage").attr("src", "");
   $(".characteristic").empty();
 })
+
+$(".cupola").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/cupola.png");
+  $(".characteristic").text("Cupola");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
+
+$(".ornamentation").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/ornamentation.png");
+  $(".characteristic").text("Ornamention");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
+
+$(".crossgable").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/crossgable.png");
+  $(".characteristic").text("Cross Gable");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
+
+$(".horizontal").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/horizontal.png");
+  $(".characteristic").text("Horizontal Emphasis");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
+
+$(".chunky").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/chunky.png");
+  $(".characteristic").text("Chunky Support Columns");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
+
+$(".halfstory").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/halfstory.png");
+  $(".characteristic").text("Half-Second Story");
+},function(e){ 
+   $(".characteristicimage").attr("src", "");
+  $(".characteristic").empty();
+})
