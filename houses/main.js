@@ -1,39 +1,40 @@
 $(".selector").text("Here's some text!");
 console.log($(".colonialroof"))
 
+$(".colonialtype").addClass("black");
 
 $(".page").scrollFlight();
-$(".pageone").on("arriving",function() {
-  $(".housetype").text("Colonial");
+
+
+$("#pageone").on("rearriving",function() {
+  $(".colonialtype").addClass("black"); 
+  $(".colonialtype").removeClass("gray");
+  $(".federaltype").addClass("gray");
+});
+$("#pagetwo").on("arriving",function() {
+  $(".colonialtype").addClass("gray");
+  $(".federaltype").removeClass("gray"); 
+});
+$("#pagetwo").on("rearriving",function() {
+  $(".colonialtype").addClass("gray");
+  $(".federaltype").removeClass("gray"); 
+  $(".victoriantype").addClass("gray"); 
+});
+$("#pagethree").on("arriving",function() {
+  $(".federaltype").addClass("gray");
+  $(".victoriantype").removeClass("gray");
+});
+$("#pagethree").on("rearriving",function() {
+  $(".bungalowtype").addClass("gray");
+  $(".victoriantype").removeClass("gray"); 
+  //$(".victoriantype").addClass("gray"); 
+});
+$("#pagefour").on("arriving",function() {
+  $(".victoriantype").addClass("gray");
+  $(".bungalowtype").removeClass("gray");
 });
 
-$(".pageone").on("rearriving",function() {
-  $(".housetype").text("Colonial");
-});
 
-$(".pagetwo").on("arriving",function() {
-  $(".housetype").text("Federal");
-});
-
-$(".pagetwo").on("rearriving",function() {
-  $(".housetype").text("Federal");
-});
-
-$(".pagethree").on("arriving",function() {
-  $(".housetype").text("Victorian");
-});
-
-$(".pagethree").on("rearriving",function() {
-  $(".housetype").text("Victorian");
-});
-
-$(".pagefour").on("arriving",function() {
-  $(".housetype").text("Bungalow");
-});
-
-$(".pagefour").on("rearriving",function() {
-  $(".housetype").text("Bungalow");
-});
 
 $(".colonialroof").hover(function(e){ 
 	console.log("hover")

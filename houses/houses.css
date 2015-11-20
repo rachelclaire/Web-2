@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 body { font-family: Times; font-size:16px; }
@@ -41,7 +42,10 @@ h4{
 	letter-spacing: 4px;
 	line-height: 110%;
 }
-.blankspace{
+.blankspaceone{
+	height: 70px;
+}
+.blankspacetwo{
 	height: 80px;
 }
 .housetype{
@@ -49,6 +53,12 @@ h4{
 	font-size: 1.2em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+.black{
+	color: black;
+}
+.gray{
+	color: lightgray;
 }
 .characteristic{
 	font-family: 'Trocchi', serif;
@@ -68,10 +78,10 @@ h4{
   min-height: 100vh;
   position:relative;
 }
-.pageone{
+
+#pageone{
 	background-color: #e2d0b5;
 }
-
 .colonialroof{
 	width: 380px;
 	position: absolute;
@@ -114,10 +124,9 @@ h4{
 	right: 370px;
 }
 
-.pagetwo{
+#pagetwo{
 	background-color: #799fcd;
 }
-
 .elliptocal{
 	position: absolute;
 	background-color:white;
@@ -152,10 +161,10 @@ h4{
 .pilastertwo{
 	right: 260px;
 }
-.pagethree{
+
+#pagethree{
 	background-color: #ead6dd;
 }
-
 .cupola{
 	width: 105px;
 	height: 180px;
@@ -198,7 +207,7 @@ h4{
 	bottom: -60px;
 }
 
-.pagefour{
+#pagefour{
 	background-color: #ddcf93;
 }
 .horizontal{
