@@ -94,6 +94,15 @@ $(".elliptocal").hover(function(e){
   $(".characteristic").empty();
 })
 
+$(".federalface").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/colonialface.png");
+  $(".characteristic").text("Symmetrical Facade");
+},function(e){ 
+   $(".characteristicimage").attr("src", "images/characteristics/blank.png");
+  $(".characteristic").empty();
+})
+
 $(".pediment").hover(function(e){ 
 	console.log("hover")
   $(".characteristicimage").attr("src", "images/characteristics/pediment.png");
