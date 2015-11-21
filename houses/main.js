@@ -88,7 +88,7 @@ $(".hipped").hover(function(e){
 $(".elliptocal").hover(function(e){ 
 	console.log("hover")
   $(".characteristicimage").attr("src", "images/characteristics/elliptocal.png");
-  $(".characteristic").text("Eliptocal Fanlight");
+  $(".characteristic").text("Eliptocal Fanlight and Sidelights on Front Door");
 },function(e){ 
    $(".characteristicimage").attr("src", "images/characteristics/blank.png");
   $(".characteristic").empty();
@@ -124,7 +124,7 @@ $(".pilaster").hover(function(e){
 $(".cupola").hover(function(e){ 
 	console.log("hover")
   $(".characteristicimage").attr("src", "images/characteristics/cupola.png");
-  $(".characteristic").text("Cupola");
+  $(".characteristic").text("Tower & Cupola");
 },function(e){ 
    $(".characteristicimage").attr("src", "images/characteristics/blank.png");
   $(".characteristic").empty();
@@ -170,6 +170,24 @@ $(".halfstory").hover(function(e){
 	console.log("hover")
   $(".characteristicimage").attr("src", "images/characteristics/halfstory.png");
   $(".characteristic").text("Half-Second Story");
+},function(e){ 
+   $(".characteristicimage").attr("src", "images/characteristics/blank.png");
+  $(".characteristic").empty();
+})
+
+$(".bungalowroof").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/bungalowroof.png");
+  $(".characteristic").text("Low-Gable Roof");
+},function(e){ 
+   $(".characteristicimage").attr("src", "images/characteristics/blank.png");
+  $(".characteristic").empty();
+})
+
+$(".dormer").hover(function(e){ 
+	console.log("hover")
+  $(".characteristicimage").attr("src", "images/characteristics/dormer.png");
+  $(".characteristic").text("Dormer Windows");
 },function(e){ 
    $(".characteristicimage").attr("src", "images/characteristics/blank.png");
   $(".characteristic").empty();
