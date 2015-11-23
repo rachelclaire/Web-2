@@ -21,7 +21,39 @@ var $img = $("<img>").attr("src",imageUrl);
 
 $box.append($img);
 $container.append($box);
+$img.on("click",function(e) {
+  showModal(video);
+});
 }
+
+
+function showModal(videoData) {
+  var title = videoData.snippet.title;
+  var imageUrl = videoData.snippet.thumbnails.medium.url;
+  var caption = videoData.snippet.description;
+  
+  
+  $(".modal").empty();
+   
+  var $h1 = $("<h1>").text(title);
+  var $img = $("<img>").attr("src",imageUrl);
+  var $p = $("<p>").text(caption);
+
+   $(".modal").append($h1,$img,$p);
+   
+   $(".overlay").show();
+   $(".overlay").one("click",function(e) {
+     hideModal();
+   });
+   $(".modal").show();
+
+}
+
+function hideModal() {
+  $(".overlay").hide();
+  $(".modal").hide();
+}
+
 
 
 /*addItems

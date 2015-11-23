@@ -1,0 +1,27 @@
+.panel{
+	width: 30%;
+	position: relative;
+	float: left;
+	min-height: 100vh;
+	background-color: lightgray;
+}
+.filters{
+	width: 30%;
+	margin: 0 auto;
+}
+.main{
+	width: 70%;
+	background-color: gray;
+	position: relative;
+	float: left;
+}
+.imagewrapper{
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	background-color: crimson;
+}
+img{
+	width:  30%;
+	margin:;
+}
