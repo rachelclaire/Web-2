@@ -1,0 +1,64 @@
+.space{
+	height: 60px;
+}
+h1{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 5em;
+	line-height: 2px;
+	text-align: center;
+}
+h3{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 700;
+ 	line-height: 15%;
+	font-size: 1.5em;	
+	text-align: center;
+	
+}
+.wrapper{
+	width: 50%;
+	float: left;
+	position: relative;
+}
+img{
+	display: block;
+	width: 400px;
+	position: relative;
+	margin: 0 auto;
+}
+ul{
+	display: inline;
+	position: relative;
+	float: left;
+	width: 50%;
+	margin-top: 70px;
+}
+p{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 400;
+	text-align: center;
+	margin-top: 80px;
+	font-size: 1.5em;
+}
+h2{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-size: 2em;	
+	text-align: center;
+}
+li{
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 100;	
+	font-size: 1.5em;	
+	list-style-type: none;
+	}
+strong{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 700;	
+	font-size: .6em;	
+	text-transform: uppercase;
+	
+}
