@@ -1,9 +1,9 @@
 .panel{
 	width: 30%;
-	position: relative;
+	position: fixed;
 	float: left;
 	min-height: 100vh;
-	background-color: lightgray;
+	background-color: #ede9df;
 }
 .filters{
 	width: 30%;
@@ -11,17 +11,82 @@
 }
 .main{
 	width: 70%;
-	background-color: gray;
 	position: relative;
-	float: left;
+	float: right;
 }
 .imagewrapper{
+	background-color:crimson;
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
-	background-color: crimson;
 }
 img{
 	width:  30%;
-	margin:;
+	margin: 4px;
+	opacity: .5;
+}
+.clear{
+	clear:both;
+}
+img:hover{
+	opacity: 1;
+}
+h2{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-size: 2em;	
+	text-align: center;
+	margin-top: 230px;
+}
+p{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 400;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 1em;
+	color: black;
+	text-decoration: none;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+h3{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 700;
+ 	line-height: 15%;
+	font-size: 1.5em;	
+	text-align: center;
+	margin-top: 40px;
+}
+h1{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 5.1em;
+	line-height: 2px;
+	text-align: center;
+}
+.off{
+	color: #c5bba7;
+}
+.window.wrapper{
+	background-color: transparent;
+	width: 70%;
+	height: 100px;
+	position: fixed;
+	top: 100px;
+	right: 0px;
+	display: block;
+}
+.window{
+	background-color:white;
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	top: 0px;
+h2{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-weight: 700;
+	font-size: 1.5em;	
+	text-align: center;
+	margin-top: 100px;
 }
