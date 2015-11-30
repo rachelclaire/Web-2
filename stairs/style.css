@@ -23,20 +23,22 @@
 div.item{
 	width:  30%;
 	margin: 4px;
-	opacity: .5;
 	float: left;
 }
 img{
+	cursor:pointer;
+	opacity: .5;
 	width:  100%;
 	margin: 4px;
 }
 .clear{
 	clear:both;
 }
-div.item:hover{
+img:hover{
 	opacity: 1;
 }
 button{
+	cursor:pointer;
 	font-family: 'Josefin Sans', sans-serif;	
 	font-size: 1em;	
 	text-align: center;
@@ -88,6 +90,7 @@ h1{
 	color: #c5bba7;
 }
 .window.wrapper{
+	z-index: 3;
 	background-color: transparent;
 	width: 70%;
 	height: 100px;
@@ -97,14 +100,26 @@ h1{
 	display: block;
 }
 .modal{
-	display: none;
-	background-color:transparent;
+	background-color:white;
 	width: 500px;
 	height: 400px;
 	margin: 0 auto;
 	position:absolute;
 	top: 0px;
 	right: 20%;
+	display: none;
+}
+.overlay {
+  position:fixed;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  background-color:#ede9df;
+  opacity: .6;
+  z-index: 3;
+  display:none;
+}
 h2{
 	font-family: 'Josefin Sans', sans-serif;	
 	font-weight: 700;
