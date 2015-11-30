@@ -15,27 +15,46 @@
 	float: right;
 }
 .imagewrapper{
-	background-color:crimson;
+	background-color:transparent;
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
 }
-img{
+div.item{
 	width:  30%;
 	margin: 4px;
 	opacity: .5;
+	float: left;
+}
+img{
+	width:  100%;
+	margin: 4px;
 }
 .clear{
 	clear:both;
 }
-img:hover{
+div.item:hover{
 	opacity: 1;
+}
+button{
+	font-family: 'Josefin Sans', sans-serif;	
+	font-size: 1em;	
+	text-align: center;
+	background-color: transparent;
+	border: none;
+	display: block;
+	margin: 0 auto;
+	padding-top: 6px;
 }
 h2{
 	font-family: 'Josefin Sans', sans-serif;	
 	font-size: 2em;	
 	text-align: center;
-	margin-top: 230px;
+	background-color: transparent;
+	border: none;
+	display: block;
+	margin: 0 auto;
+	padding-top: 30px;
 }
 p{
 	font-family: 'Josefin Sans', sans-serif;	
@@ -77,12 +96,15 @@ h1{
 	right: 0px;
 	display: block;
 }
-.window{
-	background-color:white;
+.modal{
+	display: none;
+	background-color:transparent;
 	width: 500px;
 	height: 400px;
 	margin: 0 auto;
+	position:absolute;
 	top: 0px;
+	right: 20%;
 h2{
 	font-family: 'Josefin Sans', sans-serif;	
 	font-weight: 700;

@@ -4,7 +4,7 @@ function showModal(item) {
    //make an h1, add text, get the text from item.Name
    var $h1 = $("<h1>").text(item.name);
    //make an image, add the source from item.Image
-   var $img = $("<img>").attr("src",item.image);
+   var $img = $("<img>").attr("src",item.Image);
    //make a paragraph, add the text from item.Description
    var $p = $("<p>").text(item.Description);
 
@@ -25,19 +25,22 @@ function hideModal() {
 
 //make a function to add one item, and to show the modal on click
 function addItem(item) {
-  //make a new list item with a class "item" and a class from the data spreadsheet
-
+  //make a new list item with a class "item" and a class from the data spreadsheet (indicating click state?)
+  var $li = $("<li>").addClass("item").addClass(item.color.toLowerCase());
   //add a data-category attribute to the list item, will be used for filter
-  var $div = $("<div>").addClass("item").addClass(item.color.toLowerCase());
-  $div.attr("data-color",item.color);
-  var $img = $("<img>").attr("src",item.Image);
-  $div.append($img);
-  $(".imagewrapper").append($div);
-  
+  $li.attr("data-color",item.color);
+  //make an h2 with class "name" and text from the spreadsheet
+  var $h2 = $("<h2 class='color'>").text(item.color);
+  //make a paragraph with text from the spreadsheet
+  var $p = $("<p class='material'>").text(item.material);
+  //add the h2 and p to the list item
+  $li.append($h2,$p);
   //when you click on the list item, show the modal
-  $div.on("click",function(e) {
+  $li.on("click",function(e) {
       showModal(item);
   });
+  //add in the list item to the wrapping collection
+  $(".collection").append($li);
 };
 
 //make a loop function to add all the items. sub in "data" for parameter so that it can grab stuff from the spreadsheet
