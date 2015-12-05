@@ -25,7 +25,7 @@ div.item{
 	margin: 4px;
 	float: left;
 }
-img{
+.main img{
 	cursor:pointer;
 	opacity: .5;
 	width:  100%;
@@ -34,7 +34,7 @@ img{
 .clear{
 	clear:both;
 }
-img:hover{
+.main img:hover{
 	opacity: 1;
 }
 button{
@@ -108,6 +108,23 @@ h1{
 	top: 0px;
 	right: 20%;
 	display: none;
+}
+.modal img{
+	width:70%;
+	padding: 5% 15% 5% 15%;
+}
+.left{
+	position:relative;
+	float:left;
+	width: 50%;
+}
+.right{
+	position:relative;
+	float:right;
+	width: 50%;
+}
+.modal p{
+	text-align: left;
 }
 .overlay {
   position:fixed;

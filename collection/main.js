@@ -5,7 +5,7 @@ function showModal(item) {
    var $h1 = $("<h1>").text(item.name);
    //make an image, add the source from item.Image
    var $img = $("<img>").attr("src",item.Image);
-   //make a paragraph, add the text from item.Description
+   //make a paragraph, add the text from item.color
    var $p = $("<p>").text(item.Description);
 
 //add the new stuff to the modal

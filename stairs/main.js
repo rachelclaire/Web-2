@@ -4,12 +4,19 @@ function showModal(item) {
    //make an h1, add text, get the text from item.Name
    var $h1 = $("<h1>").text(item.name);
    //make an image, add the source from item.Image
-   var $img = $("<img>").attr("src",item.image);
-   //make a paragraph, add the text from item.Description
-   var $p = $("<p>").text(item.Description);
+   var $img = $("<img>").attr("src",item.Image);
+   //make a paragraph, add the text from item.color
+   var $p1 = $("<p>").text(item.color);
+   var $p2 = $("<p>").text(item.style);
+   var $p3 = $("<p>").text(item.shape);
+   //make a div to hold the text in it
+   var $div1 = $("<div>").addClass("right");
+   var $div2 = $("<div>").addClass("left");
 
 //add the new stuff to the modal
-   $(".modal").append($h1,$img,$p);
+   $div1.append($p1, $p2, $p3);
+   $div2.append($img);   
+   $(".modal").append($h1, $div1, $div2);
    
    //show the overlay and the modal
    $(".overlay").show();
@@ -30,7 +37,7 @@ function addItem(item) {
   //add a data-category attribute to the list item, will be used for filter
   var $div = $("<div>").addClass("item").addClass(item.color.toLowerCase());
   $div.attr("data-color",item.color);
-  var $img = $("<img>").attr("src",item.Image);
+  var $img = $("<img>").attr("src",item.Image).addClass("main");
   $div.append($img);
   $(".imagewrapper").append($div);
   
@@ -87,18 +94,18 @@ function callback(data) {
       myCollection.filtered("color-facet",colorToFilter);
 
 	  //takes "selected" class off of everything
-      $("#filter-bar button.category").removeClass("selected");
+      $("#filter-bar button.category").removeClass("off");
 	  //puts "selected" on the button you just clicked
-      $(this).addClass("selected");
+      $(this).addClass("off");
   });
 
   //toggle to turn the order buttons on and off
   $(".order").on("click",function(e) {
       var order = $(this).data("order");
       //turn off all the buttons
-	  $("#filter-bar button.category").removeClass("selected");
+	  $("#filter-bar button.category").removeClass("off");
 	  //turn on the button you just clicked on.
-      $(this).addClass("selected");
+      $(this).addClass("off");
       myCollection.ordered(order);
   });
 

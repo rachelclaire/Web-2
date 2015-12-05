@@ -94,4 +94,6 @@ body {
   overflow:auto;
 }
 
-.modal img { width:300px;}
+.modal img { 
+	width:300px;
+	height: 10px;}
