@@ -37,12 +37,9 @@ function addItem(item) {
   //add a data-category attribute to the list item, will be used for filter
   var $div = $("<div>").addClass("item").addClass(item.color.toLowerCase());
   $div.attr("data-color",item.color);
-  
-  var $div = $("<div>").addClass("item").addClass(item.style.toLowerCase());
   $div.attr("data-style",item.style);
-  
-  var $div = $("<div>").addClass("item").addClass(item.shape.toLowerCase());
   $div.attr("data-shape",item.shape);
+  $div.attr("data-name",item.name);
   // FACET: add data-style attribute
   
   
@@ -79,7 +76,7 @@ function callback(data) {
   //letting it know what element to filter based on... the packery stuff?
   var myCollection = $(".item").collection({
     filters: { 
-      "title": "h2",
+      "title": "[data-name]",
       "color-facet": "[data-color]",
 	  "style-facet": "[data-style]",
 	  "shape-facet": "[data-shape]",
@@ -100,37 +97,54 @@ function callback(data) {
   });
   
   //toggle to turn the color buttons on and off
-  $(".color-category").on("click",function(e) {
 
-      var colorToFilter = $(this).data("color");
-      myCollection.filtered("color-facet",colorToFilter);
 
-	  //takes "selected" class off of everything
-      $("#filter-bar button.color-category").removeClass("off");
-	  //puts "selected" on the button you just clicked
-      $(this).addClass("off");
+  $(".color-category").on("click",function(e) {  
+	  var alreadySelected = $(this).hasClass("off");
+	  
+	  
+	  if(alreadySelected) {
+		 $(this).removeClass("off");
+ 	     myCollection.filtered("color-facet","");
+	  } else {
+	     $("#filter-bar button.color-category").removeClass("off"); 
+	     $(this).addClass("off");
+		 var colorToFilter = $(this).data("color");
+	     myCollection.filtered("color-facet",colorToFilter);
+	  }
+     
   });
 
-  $(".style-category").on("click",function(e) {
-
-      var styleToFilter = $(this).data("style");
-      myCollection.filtered("style-facet",styleToFilter);
-
-	  //takes "selected" class off of everything
-      $("#filter-bar button.style-category").removeClass("off");
-	  //puts "selected" on the button you just clicked
-      $(this).addClass("off");
+  $(".style-category").on("click",function(e) {  
+	  var alreadySelected = $(this).hasClass("off");
+	  
+	  
+	  if(alreadySelected) {
+		 $(this).removeClass("off");
+ 	     myCollection.filtered("style-facet","");
+	  } else {
+	     $("#filter-bar button.style-category").removeClass("off"); 
+	     $(this).addClass("off");
+		 var styleToFilter = $(this).data("style");
+	     myCollection.filtered("style-facet",styleToFilter);
+	  }
+     
   });
   
-  $(".shape-category").on("click",function(e) {
-
-      var shapeToFilter = $(this).data("shape");
-      myCollection.filtered("shape-facet",shapeToFilter);
-
-	  //takes "selected" class off of everything
-      $("#filter-bar button.shape-category").removeClass("off");
-	  //puts "selected" on the button you just clicked
-      $(this).addClass("off");
+  $(".shape-category").on("click",function(e) {  
+	  var alreadySelected = $(this).hasClass("off");
+	  
+	  
+	  if(alreadySelected) {
+		 $(this).removeClass("off");
+ 	     myCollection.filtered("shape-facet","");
+	  } else {
+	     $("#filter-bar button.shape-category").removeClass("off"); 
+	     $(this).addClass("off");
+		 var shapeToFilter = $(this).data("shape");
+	     myCollection.filtered("shape-facet",shapeToFilter);
+	  }
+     
   });
 
   // add a handler for that facet

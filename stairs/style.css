@@ -48,7 +48,12 @@ button{
 	margin: 0 auto;
 	padding-top: 6px;
 }
-button:focus {outline:0;}
+button:focus {
+	outline:0;}
+input:focus {
+	outline:none;
+	border: 0;}
+input{border: 0;}
 h2{
 	font-family: 'Josefin Sans', sans-serif;	
 	font-size: 2em;	
