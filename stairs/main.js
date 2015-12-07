@@ -6,9 +6,9 @@ function showModal(item) {
    //make an image, add the source from item.Image
    var $img = $("<img>").attr("src",item.Image);
    //make a paragraph, add the text from item.color
-   var $p1 = $("<p>").text(item.color);
-   var $p2 = $("<p>").text(item.style);
-   var $p3 = $("<p>").text(item.shape);
+   var $p1 = $("<p>").html("<b>color  </b>"+item.color);
+   var $p2 = $("<p>").html("<b>style  </b>"+item.style);
+   var $p3 = $("<p>").html("<b>shape  </b>"+ item.shape);
    //make a div to hold the text in it
    var $div1 = $("<div>").addClass("right");
    var $div2 = $("<div>").addClass("left");
