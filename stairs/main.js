@@ -15,7 +15,7 @@ function showModal(item) {
 
 //add the new stuff to the modal
    $div1.append($p1, $p2, $p3);
-   $div2.append($img);   
+   $div2.append($img);
    $(".modal").append($h1, $div1, $div2);
    
    //show the overlay and the modal
@@ -37,6 +37,15 @@ function addItem(item) {
   //add a data-category attribute to the list item, will be used for filter
   var $div = $("<div>").addClass("item").addClass(item.color.toLowerCase());
   $div.attr("data-color",item.color);
+  
+  var $div = $("<div>").addClass("item").addClass(item.style.toLowerCase());
+  $div.attr("data-style",item.style);
+  
+  var $div = $("<div>").addClass("item").addClass(item.shape.toLowerCase());
+  $div.attr("data-shape",item.shape);
+  // FACET: add data-style attribute
+  
+  
   var $img = $("<img>").attr("src",item.Image).addClass("main");
   $div.append($img);
   $(".imagewrapper").append($div);
@@ -71,7 +80,10 @@ function callback(data) {
   var myCollection = $(".item").collection({
     filters: { 
       "title": "h2",
-      "color-facet": "[data-color]"
+      "color-facet": "[data-color]",
+	  "style-facet": "[data-style]",
+	  "shape-facet": "[data-shape]",
+		// add a style facet
     },
 
     
@@ -88,16 +100,40 @@ function callback(data) {
   });
   
   //toggle to turn the color buttons on and off
-  $(".category").on("click",function(e) {
+  $(".color-category").on("click",function(e) {
 
-      var colorToFilter = $(this).data("colorfilter");
+      var colorToFilter = $(this).data("color");
       myCollection.filtered("color-facet",colorToFilter);
 
 	  //takes "selected" class off of everything
-      $("#filter-bar button.category").removeClass("off");
+      $("#filter-bar button.color-category").removeClass("off");
 	  //puts "selected" on the button you just clicked
       $(this).addClass("off");
   });
+
+  $(".style-category").on("click",function(e) {
+
+      var styleToFilter = $(this).data("style");
+      myCollection.filtered("style-facet",styleToFilter);
+
+	  //takes "selected" class off of everything
+      $("#filter-bar button.style-category").removeClass("off");
+	  //puts "selected" on the button you just clicked
+      $(this).addClass("off");
+  });
+  
+  $(".shape-category").on("click",function(e) {
+
+      var shapeToFilter = $(this).data("shape");
+      myCollection.filtered("shape-facet",shapeToFilter);
+
+	  //takes "selected" class off of everything
+      $("#filter-bar button.shape-category").removeClass("off");
+	  //puts "selected" on the button you just clicked
+      $(this).addClass("off");
+  });
+
+  // add a handler for that facet
 
   //toggle to turn the order buttons on and off
   $(".order").on("click",function(e) {
